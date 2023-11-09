@@ -3,11 +3,16 @@ package edu.temple.myapplication
 import android.app.Service
 import android.content.Intent
 import android.os.Binder
+import android.os.Handler
 import android.os.IBinder
 import android.util.Log
 
 @Suppress("ControlFlowWithEmptyBody")
 class TimerService : Service() {
+
+
+    lateinit var timerHandler: Handler
+
 
     private var isRunning = false
 
@@ -47,6 +52,14 @@ class TimerService : Service() {
             this@TimerService.pause()
         }
 
+
+
+        fun setHandler(handler: Handler) {
+
+            timerHandler = handler
+        }
+
+
     }
 
     override fun onCreate() {
@@ -81,6 +94,12 @@ class TimerService : Service() {
 
                         while (paused);
                         sleep(1000)
+
+
+                    if (::timerHandler.isInitialized) {
+                        timerHandler.sendEmptyMessage(i)
+                    }
+
 
                 }
                 isRunning = false
