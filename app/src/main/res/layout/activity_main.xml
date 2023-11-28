@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <Button
         android:id="@+id/startButton"
         android:layout_width="100dp"
@@ -15,6 +17,7 @@
         android:text="Start"
         app:layout_constraintBottom_toTopOf="@+id/stopButton"
         app:layout_constraintEnd_toStartOf="@+id/stopButton"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -32,7 +35,7 @@
         android:id="@+id/stopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="324dp"
+        android:layout_marginBottom="68dp"
         android:backgroundTint="#ff0000"
         android:text="Stop"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,8 +47,8 @@
         android:id="@+id/textView"
         android:layout_width="172dp"
         android:layout_height="85dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="364dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
